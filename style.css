@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    overflow-x: hidden;
+    background-color: #eee;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+span {
+    color: #ec0909;
+}
+
+/* شبكة كروت فصائل الدم */
+.p {
+    position: relative;
+    display: grid;
+    /* التكيف التلقائي مع كافة الشاشات */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    min-height: auto;
+    background-color: #eee;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(204, 9, 9, 0.5);
+    border-radius: 30px;
+    margin-top: 20px;
+    padding: 30px 20px;
+}
+
+.c {
+    box-shadow: 0 0 20px rgba(204, 9, 9, 0.3);
+    border: #ec0909 solid 1.4px;
+    border-radius: 20px;
+    padding: 25px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+button {
+    background-color: #ec0909;
+    border-radius: 20px;
+    width: 110px;
+    height: 45px;
+    border: white solid 1px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 43px;
+}
+
+button:hover {
+    background-color: #eee;
+}
+
+button:hover a {
+    color: #ec0909;
+}
+
+p {
+    font-size: 28px;
+}
+
+input {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 15px;
+    border: #ec0909 solid 3px;
+    border-radius: 15px;
+    background-color: #eee;
+    text-align: left;
+    margin: 20px auto;
+}
+
+.h {
+    font-size: 60px;
+    text-align: center;
+    color: #ec0909;
+}
+
+form {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.q {
+    color: #ec0909;
+    font-size: 18px;
+    text-align: center;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   التجاوب مع الشاشات المختلفة (Responsive)
+   ========================================== */
+
+/* شاشات الايباد والتابلت (أقل من 992px) */
+@media (max-width: 992px) {
+    .p {
+        grid-template-columns: repeat(2, 1fr); /* عرض كارتين في كل صف */
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    .h {
+        font-size: 45px;
+    }
+}
+
+/* شاشات الموبايل (أقل من 576px) */
+@media (max-width: 576px) {
+    body {
+        width: 95%;
+    }
+
+    .p {
+        grid-template-columns: 1fr; /* عرض كارت واحد فقط في كل صف */
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .c {
+        padding: 20px 10px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    .q {
+        font-size: 16px;
+    }
+
+    .h {
+        font-size: 35px;
+    }
+}
